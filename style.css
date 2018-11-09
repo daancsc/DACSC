@@ -1,0 +1,45 @@
+body {
+  background-color: #141414;
+  color: antiquewhite;
+}
+
+a i {
+  color: #555555 !important;
+  font-size: 2.5em !important;
+  margin-right: 1em;
+}
+
+a i:hover {
+  color: #888888 !important;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #333333;
+}
+
+
+.cover {
+  width: 100%;
+  height: 75vh;
+  padding-top: 30vh;
+}
+
+#typed, .typed-cursor {
+  font-family: 'Cousine', monospace;
+  font-size: 56px;
+}
+
+.navbar {
+  background-color: transparent !important;
+  color: antiquewhite !important;
+}
+
+.logo {
+  width: 3em;
+  margin: 1.5em;
+}
