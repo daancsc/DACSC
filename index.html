@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	芒果是87
+	320 Jackson是87
+  幹 蜻蜓是87
+  DACSC 2019
+-->
 <html lang="zh-tw">
   <head>
     <meta charset="UTF-8">
@@ -17,11 +23,7 @@
     </nav>
     <div class="cover container">
       <div id="typed-strings">
-        <p>We Love <span class="color">Algorithm.</span></p>
-        <p>We Love <span class="color">C++.</span></p>
-        <p>We Love <span class="color">Python.</span></p>
-        <p>We Love <span class="color">JavaScript.</span></p>
-        <p>We Love <span class="color"><b>DACSC</b></span>!</p>
+
       </div>
       <span id="typed"></span>
       <br>
@@ -35,7 +37,11 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
-      var typed = new Typed('#typed', {
+      let items = ["Algorithm", "C++", "Python", "Javascript", "DACSC"]//, "Grandma"]
+      items.forEach(i=>{
+        document.getElementById('typed-strings').innerHTML += `<p>We Love <br class="phone"><b class="color">${i}</b>.</p>`
+      })
+      let typed = new Typed('#typed', {
         stringsElement: '#typed-strings',
         typeSpeed: 30,
         backSpeed: 15
