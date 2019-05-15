@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cousine">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <title>台科大資訊安全研究社 | NTUSTISC</title>
-</head>
-
-<body>
+    <title>大安高工電腦研究社 | DACSC</title>
+  </head>
+  <body>
     <nav class="navbar">
-
-        <div class="navbar-brand" href="#">
-            <img src="logo.png" alt="Logo" class="logo">
-            <span>台科大資訊安全研究社</span>
-        </div>
+      <img src="logo.png" alt="Logo" class="logo">
+      <p class="title">大安高工電腦研究社</p>
     </nav>
     <div class="cover container">
-        <div id="typed-strings">
-            <p>We Love <span class="text-warning">Web Security</span>.</p>
-            <p>We Love <span class="text-warning">Binary Exploitation</span>.</p>
-            <p>We Love <span class="text-warning">Cryptography</span>.</p>
-            <p>We Love <b class="text-warning">Information Security</b>!</p>
-        </div>
-        <span id="typed"></span>
-        <hr>
-        <div class="concat">
-            <a href="https://www.fb.com/ntust.hacking"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            <a href="scoreboard/"><i class="fas fa-flag"></i></a>
-            <a href="https://github.com/NTUSTISC"><i class="fab fa-github"></i></a>
-            <a href="https://www.youtube.com/channel/UC4-PD2BdlYWd807BhJZkjIg"><i class="fab fa-youtube"></i></a>
-        </div>
+      <div id="typed-strings">
+        <p>We Love <span class="color">Algorithm.</span></p>
+        <p>We Love <span class="color">C++.</span></p>
+        <p>We Love <span class="color">Python.</span></p>
+        <p>We Love <span class="color">JavaScript.</span></p>
+        <p>We Love <span class="color"><b>DACSC</b></span>!</p>
+      </div>
+      <span id="typed"></span>
+      <br>
+      <br>
+      <div class="concat">
+        <a href="https://www.facebook.com/DaanCSC/"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+      </div>
     </div>
-
     <footer class="footer">
-        <div class="container">
-            <span class="text-muted">Copyright © 2018 NTUSTISC.</span>
-        </div>
+      <span>© 2019 <b>DACSC</b>.</span>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
-        var typed = new Typed('#typed', {
-            stringsElement: '#typed-strings',
-            typeSpeed: 30,
-            backSpeed: 15
-        });
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 30,
+        backSpeed: 15
+      })
     </script>
-</body>
-
+  </body>
 </html>
