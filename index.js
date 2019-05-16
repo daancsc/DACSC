@@ -45,3 +45,8 @@ let showmenu = ()=>{
   }
   menushow = !menushow
 }
+
+let closemenu = ()=>{
+  $('phonemenu').innerHTML = ""
+  menushow = false
+}

@@ -27,17 +27,19 @@
       </span>
     </nav>
     <div id="phonemenu"></div>
-    <div class="cover container mono">
-      <div id="typed-strings"></div>
-      <span id="typed"></span>
-      <div class="concat">
-        <a href="https://www.facebook.com/DaanCSC/"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://github.com/wilicw/dacsc"><i class="fab fa-github" aria-hidden="true"></i></a>
+    <div onclick="closemenu()">
+      <div class="cover container mono" onclick="closemenu()">
+        <div id="typed-strings"></div>
+        <span id="typed"></span>
+        <div class="concat">
+          <a href="https://www.facebook.com/DaanCSC/"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://github.com/wilicw/dacsc"><i class="fab fa-github" aria-hidden="true"></i></a>
+        </div>
       </div>
+      <footer class="footer mono">
+        <span id="footer"></span>
+      </footer>
     </div>
-    <footer class="footer mono">
-      <span id="footer"></span>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="index.js"></script>
   </body>
