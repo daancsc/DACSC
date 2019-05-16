@@ -1,5 +1,5 @@
 body {
-  background-color: #141414;
+  background-color: #292929;
   color: antiquewhite;
   font-family: 'Noto Sans TC', sans-serif;
 }
@@ -109,8 +109,8 @@ a i:hover {
   .bar {
     display: block;
     float: right;
-    vertical-align:middle;
     margin-top: 1.5em;
+    color: white;
     font-size: 1.5em;
   }
 }
@@ -139,5 +139,11 @@ a i:hover {
 
   .footer {
     font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .phone {
+    display: none;
   }
 }
