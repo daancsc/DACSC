@@ -1,6 +1,10 @@
 body {
   background-color: #141414;
   color: antiquewhite;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.cousine {
   font-family: 'Cousine', monospace;
 }
 
@@ -40,7 +44,7 @@ a i:hover {
 
 .navbar {
   margin: 2em;
-  margin-left: 5em;
+  margin-left: 5vh;
 }
 
 .logo {
@@ -56,7 +60,7 @@ a i:hover {
 
 .title {
   font-size: 1.6em;
-  margin-left: 0.5em;
+  margin-left: 0.8em;
   vertical-align:middle;
 }
 
@@ -75,6 +79,7 @@ a i:hover {
 .menu {
   float: right;
   margin-right: 3vw;
+  margin-top: 0.7em;
 }
 
 .menu a {
@@ -87,7 +92,8 @@ a i:hover {
 }
 
 #menu {
-  margin-right: 10vw;
+  margin-right: 5vw;
+  font-size: 0.8em;
   vertical-align:middle;
 }
 
@@ -105,11 +111,13 @@ a i:hover {
     display: none;
   }
 
-  .navbar {
-    margin-left: 5vw;
-  }
-
   .logo {
     width: 3em;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #menu {
+    display: none;
   }
 }

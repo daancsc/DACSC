@@ -6,13 +6,17 @@ let app = {
   "en_name": "DACSC",
   "year": new Date().getFullYear(),
   "menu": [
-    {"text": "相簿", "link": "123"},
-    {"text": "關於電研", "link": "about"}
+    {"text": "課程", "link": "/indexDev.html#class"},
+    {"text": "相簿", "link": "/indexDev.html#photos"},
+    {"text": "關於電研", "link": "/indexDev.html#about"}
   ]
 }
 let items = ["Algorithm", "C++", "Python", "Javascript", "DACSC"]//, "Grandma"]
 items.forEach(i=>{
   _.getElementById('typed-strings').innerHTML += `<p>We Love <br class="phone"><b class="color">${i}</b>.</p>`
+})
+app.menu.forEach(i=>{
+  _.getElementById('menu').innerHTML += `<p class="title nonphone menu"><a href="${i.link}">${i.text}</a></p>`
 })
 _.title = app.title
 _.getElementsByClassName('nonphone')[0].innerHTML = app.name
@@ -22,8 +26,4 @@ let typed = new Typed('#typed', {
   stringsElement: '#typed-strings',
   typeSpeed: 30,
   backSpeed: 15
-})
-
-app.menu.forEach(i=>{
-  _.getElementById('menu').innerHTML += `<p class="title nonphone menu"><a href="${i.link}">${i.text}</a></p>`
 })
