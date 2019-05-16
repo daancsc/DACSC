@@ -11,7 +11,7 @@ let app = {
     {"text": "關於電研", "link": "/indexDev.html#about"}
   ]
 }
-let items = ["Algorithm", "C++", "Python", "Javascript", "DACSC"]//, "Grandma"]
+let items = ["Algorithm", "Assembly", "C++", "Python", "Javascript", "DACSC"]//, "Your Grandma"]
 items.forEach(i=>{
   _.getElementById('typed-strings').innerHTML += `<p>We Love <br class="phone"><b class="color">${i}</b>.</p>`
 })
