@@ -4,6 +4,7 @@ let app = {
   "name": "大安高工電腦研究社",
   "shortname": "大安電研",
   "en_name": "DACSC",
+  "footer": "DAAN Computer Study Club since 1999",
   "year": new Date().getFullYear(),
   "menu": [
     {"text": "課程", "link": "/indexDev.html#class"},
@@ -21,7 +22,7 @@ app.menu.forEach(i=>{
 _.title = app.title
 _.getElementsByClassName('nonphone')[0].innerHTML = app.name
 _.getElementsByClassName('phone')[0].innerHTML = app.shortname
-_.getElementById('footer').innerHTML = `© ${app.year} <b>${app.en_name}</b>.`
+_.getElementById('footer').innerHTML = `© ${app.year} <b>${app.footer}</b>.`
 let typed = new Typed('#typed', {
   stringsElement: '#typed-strings',
   typeSpeed: 30,

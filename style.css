@@ -44,7 +44,7 @@ a i:hover {
 
 .navbar {
   margin: 2em;
-  margin-left: 5vh;
+  margin-left: 3vh;
 }
 
 .logo {
@@ -109,7 +109,6 @@ a i:hover {
   .bar {
     display: block;
     float: right;
-    margin-right: 3vw;
     vertical-align:middle;
     margin-top: 1.5em;
     font-size: 1.5em;
@@ -136,5 +135,9 @@ a i:hover {
 
   .bar {
     margin-top: 1em;
+  }
+
+  .footer {
+    font-size: 0.8em;
   }
 }
