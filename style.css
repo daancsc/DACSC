@@ -69,10 +69,29 @@ a i:hover {
 }
 
 .concat {
-    margin-top: 2em;
+  margin-top: 2em;
 }
 
-@media only screen and (max-width: 600px) {
+.menu {
+  float: right;
+  margin-right: 3vw;
+}
+
+.menu a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #22c9b7 !important;
+}
+
+#menu {
+  margin-right: 10vw;
+  vertical-align:middle;
+}
+
+@media only screen and (max-width: 500px) {
   .cover {
     height: 40vh;
     padding-top: 20vh;
@@ -87,7 +106,10 @@ a i:hover {
   }
 
   .navbar {
-    margin-left: 3em;
-    text-align: center;
+    margin-left: 5vw;
+  }
+
+  .logo {
+    width: 3em;
   }
 }
