@@ -17,7 +17,7 @@ let menushow = false
 let menuhtml = ""
 let items = ["Algorithm", "Assembly", "C++", "Python", "Javascript", "<b>DACSC</b>"]//, "Your Grandma"]
 items.forEach(i=>{
-  $('typed-strings').innerHTML += `<p>We Love <br class="phone"><span class="color">${i}</span>.</p>`
+  $('typed-strings').innerHTML += `<p>We Love <br class="phone"><span class="color">${i}</span>!</p>`
 })
 app.menu.forEach(i=>{
   $('menu').innerHTML += `<p class="title nonphone menu"><a href="${i.link}">${i.text}</a></p>`
