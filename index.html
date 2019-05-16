@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!--
-	芒果是87
-	320 Jackson是87
+  芒果是87
+  320 Jackson是87
   幹 蜻蜓是87
   DACSC 2019
 -->
@@ -14,39 +14,25 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png">
-    <title>大安高工電腦研究社 | DACSC</title>
+    <title></title>
   </head>
   <body>
     <nav class="navbar">
       <img src="logo.png" alt="Logo" class="logo">
-      <p class="title nonphone">大安高工電腦研究社</p>
-      <p class="title phone">大安電研</p>
+      <p class="title nonphone"></p>
+      <p class="title phone"></p>
     </nav>
     <div class="cover container">
-      <div id="typed-strings">
-
-      </div>
+      <div id="typed-strings"></div>
       <span id="typed"></span>
-      <br>
-      <br>
       <div class="concat">
         <a href="https://www.facebook.com/DaanCSC/"><i class="fab fa-facebook" aria-hidden="true"></i></a>
       </div>
     </div>
     <footer class="footer">
-      <span>© 2019 <b>DACSC</b>.</span>
+      <span id="footer"></span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <script>
-      let items = ["Algorithm", "C++", "Python", "Javascript", "DACSC"]//, "Grandma"]
-      items.forEach(i=>{
-        document.getElementById('typed-strings').innerHTML += `<p>We Love <br class="phone"><b class="color">${i}</b>.</p>`
-      })
-      let typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        typeSpeed: 30,
-        backSpeed: 15
-      })
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
