@@ -15,7 +15,7 @@ let app = {
 }
 let menushow = false
 let menuhtml = ""
-let items = ["Algorithm", "Assembly", "C++", "Python", "Javascript", "<b>DACSC</b>"]//, "Your Grandma"]
+let items = ["Algorithm", "Assembly", "C++", "Python", "JavaScript", "<b>DACSC</b>"]//, "Your Grandma"]
 items.forEach(i=>{
   $('typed-strings').innerHTML += `<p>We Love <br class="phone"><span class="color">${i}</span>!</p>`
 })
