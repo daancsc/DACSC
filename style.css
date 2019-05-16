@@ -82,19 +82,28 @@ a i:hover {
   margin-top: 0.8em;
 }
 
-.menu a {
+a {
   color: antiquewhite;
   text-decoration: none;
 }
 
-.menu a:hover {
-  color: #22c9b7 !important;
+i:hover {
+  color: #22c9b7;
+}
+
+a:hover {
+  color: #22c9b7;
 }
 
 #menu {
   margin-right: 5vw;
   font-size: 0.8em;
   vertical-align:middle;
+}
+
+#phonemenu {
+  text-align: center;
+  font-size: 1.3em;
 }
 
 .bar {
@@ -118,7 +127,7 @@ a i:hover {
 @media only screen and (max-width: 500px) {
   .cover {
     height: 40vh;
-    padding-top: 20vh;
+    padding-top: 20%;
   }
 
   .phone {
@@ -143,7 +152,7 @@ a i:hover {
 }
 
 @media only screen and (max-width: 300px) {
-  .phone {
+  .title {
     display: none;
   }
 }
