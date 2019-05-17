@@ -10,37 +10,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo_black.png">
-    <title></title>
   </head>
   <body>
     <nav class="navbar">
-      <img src="logo.png" alt="Logo" class="logo">
-      <p class="title nonphone"></p>
-      <p class="title phone"></p>
+      <img src="logo.png" onclick="router.navigate('/')" alt="Logo" class="logo">
+      <p class="title nonphone" onclick="router.navigate('/')"></p>
+      <p class="title phone" onclick="router.navigate('/')"></p>
       <span id="menu">
-        <i class="fas fa-bars bar" aria-hidden="true" onclick="showmenu()"></i>
+        <i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>
       </span>
     </nav>
     <div id="phonemenu"></div>
-    <div onclick="closemenu()">
-      <div class="cover container mono" onclick="closemenu()">
-        <div id="typed-strings"></div>
-        <span id="typed"></span>
-        <div class="concat">
-          <a href="https://www.facebook.com/DaanCSC/"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-          <a href="https://github.com/wilicw/dacsc"><i class="fab fa-github" aria-hidden="true"></i></a>
-        </div>
-      </div>
-      <footer class="footer mono">
-        <span id="footer"></span>
-      </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <div id="page" onclick="app.menu.close()"></div>
+    <footer class="footer mono">
+      <span id="footer"></span>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+    <script src="https://unpkg.com/navigo@6"></script>
     <script src="index.js"></script>
   </body>
 </html>

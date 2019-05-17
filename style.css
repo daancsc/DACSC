@@ -1,3 +1,6 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu+Mono";
+@import "https://fonts.googleapis.com/css?family=Noto+Sans+TC";
+
 body {
   background-color: #292929;
   color: antiquewhite;
@@ -44,7 +47,7 @@ a i:hover {
 
 .navbar {
   margin: 2em;
-  margin-left: 3vh;
+  margin-left: 5vh;
 }
 
 .logo {
@@ -72,7 +75,7 @@ a i:hover {
   display: none;
 }
 
-.concat {
+#contact {
   margin-top: 2em;
 }
 
@@ -148,6 +151,10 @@ a:hover {
 
   .footer {
     font-size: 0.8em;
+  }
+
+  .navbar {
+    margin-left: 3vh;
   }
 }
 
