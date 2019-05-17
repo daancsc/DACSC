@@ -7,6 +7,7 @@ let app = {
   en_name: "DACSC",
   contact: [
     {name: "facebook", link: "https://www.facebook.com/DaanCSC", icon: "fab fa-facebook"},
+    {name: "instagram", link: "https://www.instagram.com/daancsc/", icon: "fab fa-instagram"},
     {name: "github", link: "https://github.com/wilicw/dacsc", icon: "fab fa-github"}
   ],
   footer: "DAAN Computer Study Club since 1999",
@@ -35,6 +36,32 @@ let app = {
       app.menu.isShow = !app.menu.isShow
     },
     isShow: false
+  },
+  friends: {
+    list: [
+      {name: "建中資訊社", shortname: "INFOR", fb: "ckINFOR", ig: "infor31st", web: "https://infor.org/"},
+      {name: "北一女中資訊研習社", shortname: "FGISC", fb: "fgisc", ig: "fgisc32nd", web: ""},
+      {name: "中山女高資訊研究社", shortname: "ZSISC", fb: "zsisc25", ig: "zsisc26th", web: ""},
+      {name: "景美女中電腦資訊社", shortname: "CMIOC", fb: "CMIOC25", ig: "cmioc25", web: ""},
+      {name: "高雄女中電腦資訊暨網路科技研究社", shortname: "KGHSI2TRC2", fb: "KGHSI2TRC2", ig: "kghs_i2trc2_24th", web: "http://url.kghsi2trc2.tw/Web"},
+      {name: "丹鳳資訊研究社", shortname: "dfichealer", fb: "", ig: "dfichealer", web: ""},
+      {name: "板橋高中資訊社", shortname: "PCIC", fb: "PCSHInforClub", ig: "pcshic", web: "https://sites.google.com/site/pcshic/"},
+      {name: "附中工業技術研究社", shortname: "hsnu_itrs", fb: "HSNU.ITRS.infinite", ig: "hsnu_itrs", web: ""},
+      {name: "成功高中電子計算機研習社", shortname: "CKCSC", fb: "", ig: "ckcsc32nd_diary", web: ""},
+      {name: "成功高中機器人研究社", shortname: "CGRC", fb: "CGRC2nd", ig: "cgrc_4th", web: ""},
+      {name: "大直資訊", shortname: "DZIF", fb: "dzif20th", ig: "dzif20th", web: "https://linktr.ee/dzif20th"},
+      {name: "松山高中資訊研究社", shortname: "SSINRC", fb: "", ig: "ssinrc_29", web: "https://ssinrc.org"},
+      {name: "興國資訊應用社", shortname: "HKHSHIRC", fb: "HKHSprogrammingDesignClub", ig: "hkhs_hirc", web: ""},
+      {name: "台南女中資訊研究社", shortname: "TGIRC", fb: "tgirc", ig: "tngs_tgirc", web: ""},
+      {name: "永春高中資訊電腦研究社", shortname: "YCTECH", fb: "", ig: "yctech_23nd", web: "https://sites.google.com/view/ycshwebsite"},
+      {name: "中和資研", shortname: "CHISC", fb: "chisc.club", ig: "chisc.chshs", web: "https://www.chisc.club/"},
+      {name: "竹女資訊研究社", shortname: "HGISC", fb: "HGISCinHGSH", ig: "hgisc.2", web: "https://hgisc.github.io/homepage/index.html"},
+      {name: "嘉義女中程式研究社", shortname: "CYGSHPRC", fb: "CYGSH.PRC", ig: "cygsh_prc_5th", web: ""},
+      {name: "台中二中電腦研習社", shortname: "TCSSHCSC", fb: "csc241", ig: "tcssh_csc", web: "https://csc241.tcssh.tc.edu.tw/"},
+      {name: "內壢高中資研社", shortname: "NLPC", fb: "", ig: "nlpc_1st_hacker", web: ""},
+      {name: "實驗中學資訊研究社", shortname: "NEHSICED", fb: "ICEDinNEHS", ig: "nehs_iced", web: "https://join.iced.tw/"},
+      {name: "北商大資訊研究社", shortname: "NTUBIRC", fb: "", ig: "ntub_irc", web: ""},
+    ]
   }
 }
 let root = null
@@ -61,6 +88,7 @@ let start_typing = () => {
 
 let error404 = () => {
   app.init()
+  _.title = `404 Not found | ${app.shortname}`
   let baseHTML = `
     <div class="cover container mono">
       <div id="typed-strings"></div>
@@ -83,6 +111,20 @@ let underDEV = () => {
   $('page').innerHTML = baseHTML
   $('typed-strings').innerHTML = `<p>We are under<br><span class="color">Development</span>!</p>`
   start_typing()
+}
+
+let friends = () => {
+  app.init()
+  let baseHTML = `
+    <div class="container">
+      <div id="friends"></div>
+    </div>
+  `
+  $('page').innerHTML = baseHTML
+  app.friends.list.forEach(i=>{
+    console.log(i.name)
+    $('friends').innerHTML += `<p><span class="color">${i.name}</span>!</p>`
+  })
 }
 
 router.on(() => {
@@ -114,6 +156,10 @@ router.on({
   },
   '/photos': () => {
     underDEV()
+    //router.navigate('/')
+  },
+  '/friends': () => {
+    friends()
     //router.navigate('/')
   },
   '/404': () => {

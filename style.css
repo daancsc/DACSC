@@ -59,6 +59,8 @@ a i:hover {
 .container {
   margin-left: 10vw;
   margin-right: 10vw;
+  height: 100vh;
+  position: relative;
 }
 
 .title {
