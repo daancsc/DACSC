@@ -39,7 +39,7 @@ let useHash = true
 let router = new Navigo(root, useHash)
 
 app.menu.item.forEach(i=>{
-  app.menu.html += `<p><a href="${i.link}">${i.text}</a></p>`
+  app.menu.html += `<p><a href="#${i.link}">${i.text}</a></p>`
   $('menu').innerHTML += `<p class="title nonphone menu"><a href="#${i.link}">${i.text}</a></p>`
 })
 
