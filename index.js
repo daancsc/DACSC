@@ -11,6 +11,10 @@ let app = {
   ],
   footer: "DAAN Computer Study Club since 1999",
   year: new Date().getFullYear(),
+  init: () => {
+    app.menu.close()
+    $('page').innerHTML = ""
+  },
   menu: {
     item: [
       {text: "課程", link: "/class"},
@@ -20,20 +24,19 @@ let app = {
     html: "",
     close: () => {
       $('phonemenu').innerHTML = ""
-      menushow = false
+      app.menu.isShow = false
     },
     open: () => {
-      if (!menushow) {
+      if (!app.menu.isShow) {
         $('phonemenu').innerHTML = app.menu.html
       } else {
         $('phonemenu').innerHTML = ""
       }
-      menushow = !menushow
-    }
+      app.menu.isShow = !app.menu.isShow
+    },
+    isShow: false
   }
 }
-let menushow = false
-let menuhtml = ""
 let root = null
 let useHash = true
 let router = new Navigo(root, useHash)
@@ -57,7 +60,7 @@ let start_typing = () => {
 }
 
 let error404 = () => {
-  $('page').innerHTML = ""
+  app.init()
   let baseHTML = `
     <div class="cover container mono">
       <div id="typed-strings"></div>
@@ -71,6 +74,7 @@ let error404 = () => {
 }
 
 router.on(() => {
+  app.init()
   let baseHTML = `
     <div class="cover container mono">
       <div id="typed-strings"></div>
