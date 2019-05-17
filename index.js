@@ -69,7 +69,19 @@ let error404 = () => {
   `
   $('page').innerHTML = baseHTML
   $('typed-strings').innerHTML = `<p>Are you love <br class="phone"><span class="color">Error 404</span>?</p>`
-  $('typed-strings').innerHTML += `<p>We are <br class="phone"><span class="color">under development</span>!</p>`
+  start_typing()
+}
+
+let underDEV = () => {
+  app.init()
+  let baseHTML = `
+    <div class="cover container mono">
+      <div id="typed-strings"></div>
+      <span id="typed"></span>
+    </div>
+  `
+  $('page').innerHTML = baseHTML
+  $('typed-strings').innerHTML = `<p>We are under<br><span class="color">Development</span>!</p>`
   start_typing()
 }
 
@@ -95,19 +107,22 @@ router.on(() => {
 
 router.on({
   '/about': () => {
-    error404()
+    underDEV()
   },
   '/class': () => {
-    error404()
+    underDEV()
   },
   '/photos': () => {
-    error404()
+    underDEV()
     //router.navigate('/')
+  },
+  '/404': () => {
+    error404()
   }
 }).resolve()
 
 router.notFound(() => {
-  error404()
+  router.navigate('/404')
 })
 
 console.log('%c DACSC\n 大安電研\n 21th\n ', 'font-family: "Ubuntu Mono", monospace;font-size: 5em; color: red;text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)')
