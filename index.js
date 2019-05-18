@@ -57,9 +57,9 @@ let app = {
       {name: "中和資研", shortname: "CHISC", fb: "chisc.club", ig: "chisc.chshs", web: "https://www.chisc.club/"},
       {name: "竹女資訊研究社", shortname: "HGISC", fb: "HGISCinHGSH", ig: "hgisc.2", web: "https://hgisc.github.io/homepage/index.html"},
       {name: "嘉義女中程式研究社", shortname: "CYGSHPRC", fb: "CYGSH.PRC", ig: "cygsh_prc_5th", web: ""},
-      {name: "台中二中電腦研習社", shortname: "TCSSHCSC", fb: "csc241", ig: "tcssh_csc", web: "https://csc241.tcssh.tc.edu.tw/"},
       {name: "內壢高中資研社", shortname: "NLPC", fb: "", ig: "nlpc_1st_hacker", web: ""},
       {name: "實驗中學資訊研究社", shortname: "NEHSICED", fb: "ICEDinNEHS", ig: "nehs_iced", web: "https://join.iced.tw/"},
+      {name: "台中二中電腦研習社", shortname: "TCSSHCSC", fb: "csc241", ig: "tcssh_csc", web: "https://csc241.tcssh.tc.edu.tw/"},
       {name: "北商大資訊研究社", shortname: "NTUBIRC", fb: "", ig: "ntub_irc", web: ""},
     ]
   }
@@ -121,9 +121,39 @@ let friends = () => {
     </div>
   `
   $('page').innerHTML = baseHTML
+  let j = 0
+  let cardHTML = ""
   app.friends.list.forEach(i=>{
     console.log(i.name)
-    $('friends').innerHTML += `<p><span class="color">${i.name}</span>!</p>`
+    let fb = ""
+    let ig = ""
+    let web = ""
+    if (i.fb!="") {
+      fb = `<a href="https://fb.com/${i.fb}"><i class="fab fa-facebook" aria-hidden="true"></i></a>`
+    }
+    if (i.ig!="") {
+      ig = `<a href="https://www.instagram.com/${i.ig}"><i class="fab fa-instagram" aria-hidden="true"></i></a>`
+    }
+    if (i.web!="") {
+      web = `<a href="${i.web}"><i class="fas fa-globe-asia" aria-hidden="true"></i></a>`
+    }
+    cardHTML += `
+      <div class="col grid_1_of_4">
+        <p class="card_short mono">${i.shortname}</p>
+        <p class="card_title">${i.name} </p>
+        <span class="card_link">
+          ${fb}
+          ${ig}
+          ${web}
+        </span>
+      </div>
+    `
+    if ((j+1)%4==0) {
+      $('friends').innerHTML += `<div class="section">${cardHTML}</div>`
+      cardHTML = ""
+    }
+    j++
+
   })
 }
 

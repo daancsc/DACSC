@@ -27,6 +27,50 @@ a i
 a i:hover
   color: #888888 !important
 
+
+.section
+  clear: both
+  margin: 0px
+  padding: 0px
+/* Column */
+.col
+  background: #393939
+  display: block
+  float: left
+  margin: 1% 0 1% 2%
+
+.col:first-child
+  margin-left: 0 !important
+
+
+/* Row */
+.row:before, .row:after
+  content: ""
+  display: table
+.row:after
+  clear: both
+.row
+  zoom: 1
+
+
+/* Grid */
+.grid_1_of_4
+  width: 23.5%
+.grid_2_of_4
+  width: 49%
+.grid_3_of_4
+  width: 74.5%
+.grid_4_of_4
+  width: 100%
+
+/* Full Width below 768 pixels */
+@media only screen and (max-width: 768px)
+  .col
+    margin: 1% 0 1% 0%
+  [class*='grid_']
+    width: 100%
+
+
 .footer
   position: fixed
   bottom: 0
@@ -88,6 +132,31 @@ a i:hover
   margin-right: 3vw
   margin-top: 0.8em
 
+
+
+
+.card_short
+  text-align: center
+  font-size: 2em
+
+
+.card_title
+  margin: 20px
+  font-size: 1.2em
+  text-align: left
+
+
+.card_link
+  float: left
+  text-align: left
+  margin: 0
+  margin-left: 20px
+  font-size: 0.7em
+
+.card_link i
+  margin: 0
+  margin-right: 0.6em
+  margin-bottom: 1em
 
 a
   color: $font-color
