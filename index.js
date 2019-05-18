@@ -128,7 +128,6 @@ let friends = () => {
   let j = 0
   let cardHTML = ""
   app.friends.list.forEach(i=>{
-    console.log(i.name)
     let fb = ""
     let ig = ""
     let web = ""
@@ -153,6 +152,10 @@ let friends = () => {
       </div>
     `
     if ((j+1)%4==0) {
+      $('friends').innerHTML += `<div class="section">${cardHTML}</div>`
+      cardHTML = ""
+    }
+    if (j==app.friends.list.length-1) {
       $('friends').innerHTML += `<div class="section">${cardHTML}</div>`
       cardHTML = ""
     }
