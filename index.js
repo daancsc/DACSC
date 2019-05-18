@@ -115,6 +115,7 @@ let underDEV = () => {
 
 let friends = () => {
   app.init()
+  _.title = `電資友社 | ${app.shortname}`
   let baseHTML = `
     <div class="container">
       <p class="page-title">電資友社</p>
