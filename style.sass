@@ -1,0 +1,156 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu+Mono"
+@import "https://fonts.googleapis.com/css?family=Noto+Sans+TC"
+
+$font: 'Noto Sans TC', sans-serif
+$mono: 'Ubuntu Mono', monospace
+$background-color: #292929
+$font-color: antiquewhite
+$primary-color: #22c9b7
+$footer-height: 6vh
+
+
+body
+  background-color: $background-color
+  color: $font-color
+  font-family: $font
+  margin: 0
+  margin-bottom: $footer-height * 1.5
+
+.mono
+  font-family: $mono
+
+a i
+  color: #555555
+  font-size: 2.5em
+  margin-right: 1em
+
+a i:hover
+  color: #888888 !important
+
+.footer
+  position: fixed
+  bottom: 0
+  width: 100%
+  height: $footer-height
+  line-height: $footer-height
+  background-color: #333333
+  text-align: center
+
+.cover
+  height: 40vh
+  padding-top: 30vh
+
+
+.color
+  color: $primary-color
+
+
+#typed, .typed-cursor
+  font-size: 3em
+
+
+.navbar
+  margin: 2em
+  margin-left: 5vh
+
+
+.logo
+  width: 4em
+  display: inline-block
+  vertical-align: middle
+
+
+.container
+  margin-left: 10vw
+  margin-right: 10vw
+  position: relative
+
+.title
+  font-size: 1.6em
+  margin-left: 0.8em
+  vertical-align: middle
+
+
+.nonphone
+  display: inline
+
+
+.phone
+  display: none
+
+
+#contact
+  margin-top: 2em
+
+
+.menu
+  float: right
+  margin-right: 3vw
+  margin-top: 0.8em
+
+
+a
+  color: $font-color
+  text-decoration: none
+
+
+i:hover, a:hover
+  color: $primary-color
+
+#menu
+  margin-right: 5vw
+  font-size: 0.8em
+  vertical-align: middle
+
+#phonemenu
+  text-align: center
+  font-size: 1.3em
+
+.bar
+  display: none
+
+.noselect
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+@media only screen and (max-width: 850px)
+  .menu
+    display: none
+
+  .bar
+    display: block
+    float: right
+    margin-top: 1.5em
+    color: $font-color
+    font-size: 1.5em
+
+@media only screen and (max-width: 500px)
+  .cover
+    height: 40vh
+    padding-top: 20%
+
+  .phone
+    display: inline
+
+  .nonphone
+    display: none
+
+  .logo
+    width: 3em
+
+  .bar
+    margin-top: 1em
+
+  .footer
+    font-size: 0.8em
+
+  .navbar
+    margin-left: 3vh
+
+@media only screen and (max-width: 300px)
+  .title
+    display: none
