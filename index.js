@@ -123,6 +123,7 @@ let friends = () => {
       <br>
       <div id="friends"></div>
       <div class="section"></div>
+      <p class="no-important">* 如須更新資料請來信告知</p>
     </div>
   `
   $('page').innerHTML = baseHTML
