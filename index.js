@@ -18,6 +18,7 @@ let app = {
   },
   menu: {
     item: [
+      {text: "友社", link: "/friends"},
       {text: "課程", link: "/class"},
       {text: "相簿", link: "/photos"},
       {text: "關於電研", link: "/about"}
