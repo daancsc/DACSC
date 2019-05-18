@@ -117,6 +117,9 @@ let friends = () => {
   app.init()
   let baseHTML = `
     <div class="container">
+      <p class="page-title">電資友社</p>
+      <hr>
+      <br>
       <div id="friends"></div>
     </div>
   `
@@ -153,7 +156,6 @@ let friends = () => {
       cardHTML = ""
     }
     j++
-
   })
 }
 
