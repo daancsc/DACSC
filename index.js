@@ -122,6 +122,7 @@ let friends = () => {
       <hr>
       <br>
       <div id="friends"></div>
+      <div class="section"></div>
     </div>
   `
   $('page').innerHTML = baseHTML
