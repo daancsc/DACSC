@@ -114,6 +114,29 @@ let underDEV = () => {
   start_typing()
 }
 
+let rules = () => {
+  app.init()
+  _.title = `社團憲章 | ${app.shortname}`
+  let baseHTML = `
+    <div class="container">
+      <p class="page-title">社團憲章</p>
+      <hr>
+      <br>
+      <div id="rules"></div>
+    </div>
+  `
+  $('page').innerHTML = baseHTML
+  fetch('rules.md')
+    .then(res => {
+      return res.text()
+    })
+    .then(data=>{
+      let converter = new showdown.Converter()
+      let html = converter.makeHtml(data)
+      $('rules').innerHTML = html
+    })
+}
+
 let friends = () => {
   app.init()
   _.title = `電資友社 | ${app.shortname}`
@@ -193,13 +216,15 @@ router.on({
   '/class': () => {
     underDEV()
   },
+  '/friends': () => {
+    friends()
+  },
   '/photos': () => {
     underDEV()
     //router.navigate('/')
   },
-  '/friends': () => {
-    friends()
-    //router.navigate('/')
+  '/rules': () => {
+    rules()
   },
   '/404': () => {
     error404()
