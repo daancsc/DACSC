@@ -26,15 +26,13 @@ let app = {
     html: "",
     close: () => {
       $('phonemenu').innerHTML = ""
+      $('icon').innerHTML = `<i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>`
       app.menu.isShow = false
     },
     open: () => {
-      if (!app.menu.isShow) {
-        $('phonemenu').innerHTML = app.menu.html
-      } else {
-        $('phonemenu').innerHTML = ""
-      }
-      app.menu.isShow = !app.menu.isShow
+      $('phonemenu').innerHTML = app.menu.html
+      $('icon').innerHTML = `<i class="fas fa-times bar" aria-hidden="true" onclick="app.menu.close()"></i>`
+      app.menu.isShow = true
     },
     isShow: false
   },
@@ -73,6 +71,8 @@ app.menu.item.forEach(i=>{
   app.menu.html += `<p><a href="#${i.link}">${i.text}</a></p>`
   $('menu').innerHTML += `<p class="title nonphone menu"><a href="#${i.link}">${i.text}</a></p>`
 })
+
+$('icon').innerHTML = `<i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>`
 
 _.title = app.title
 _.getElementsByClassName('nonphone')[0].innerHTML = app.name

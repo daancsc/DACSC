@@ -98,8 +98,15 @@ a i:hover
 
 
 .navbar
-  margin: 2em
-  margin-left: 5vh
+  margin-left: 3vh
+  position: sticky
+  justify-content: space-between
+  align-items: center
+  top: 0
+  padding: 1em
+  padding-bottom: 0.5em
+  z-index: 9999
+  background-color: $background-color
 
 
 .logo
@@ -174,7 +181,7 @@ a
   text-decoration: none
 
 
-.navbar i:hover, .navbar a:hover
+.navbar a:hover
   border-bottom: 2px solid $primary-color
 
 #menu
@@ -223,13 +230,16 @@ a
     width: 3em
 
   .bar
-    margin-top: 1em
+    margin-top: 0.7em
 
   .footer
     font-size: 0.8em
 
   .navbar
-    margin-left: 3vh
+    padding: 0
+    padding: 1em
+    padding-bottom: 0.5em
+    margin-left: 0
 
 @media only screen and (max-width: 300px)
   .title
