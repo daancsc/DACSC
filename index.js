@@ -52,14 +52,14 @@ let app = {
       {name: "大直資訊", shortname: "DZIF", fb: "dzif20th", ig: "dzif20th", web: "https://linktr.ee/dzif20th"},
       {name: "松山高中資訊研究社", shortname: "SSINRC", fb: "", ig: "ssinrc_29", web: "https://ssinrc.org"},
       {name: "興國資訊應用社", shortname: "HKHSHIRC", fb: "HKHSprogrammingDesignClub", ig: "hkhs_hirc", web: ""},
-      {name: "台南女中資訊研究社", shortname: "TGIRC", fb: "tgirc", ig: "tngs_tgirc", web: ""},
+      {name: "臺南女中資訊研究社", shortname: "TGIRC", fb: "tgirc", ig: "tngs_tgirc", web: ""},
       {name: "永春高中資訊電腦研究社", shortname: "YCTECH", fb: "", ig: "yctech_23nd", web: "https://sites.google.com/view/ycshwebsite"},
       {name: "中和資研", shortname: "CHISC", fb: "chisc.club", ig: "chisc.chshs", web: "https://www.chisc.club/"},
       {name: "竹女資訊研究社", shortname: "HGISC", fb: "HGISCinHGSH", ig: "hgisc.2", web: "https://hgisc.github.io/homepage/index.html"},
       {name: "嘉義女中程式研究社", shortname: "CYGSHPRC", fb: "CYGSH.PRC", ig: "cygsh_prc_5th", web: ""},
       {name: "內壢高中資研社", shortname: "NLPC", fb: "", ig: "nlpc_1st_hacker", web: ""},
       {name: "實驗中學資訊研究社", shortname: "NEHSICED", fb: "ICEDinNEHS", ig: "nehs_iced", web: "https://join.iced.tw/"},
-      {name: "台中二中電腦研習社", shortname: "TCSSHCSC", fb: "csc241", ig: "tcssh_csc", web: "https://csc241.tcssh.tc.edu.tw/"},
+      {name: "臺中二中電腦研習社", shortname: "TCSSHCSC", fb: "csc241", ig: "tcssh_csc", web: "https://csc241.tcssh.tc.edu.tw/"},
       {name: "北商大資訊研究社", shortname: "NTUBIRC", fb: "", ig: "ntub_irc", web: ""},
     ]
   }
