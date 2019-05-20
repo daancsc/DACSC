@@ -38,9 +38,10 @@ let app = {
   },
   friends: {
     list: [
-      {name: "建中資訊社", shortname: "INFOR", fb: "ckINFOR", ig: "infor31st", web: "https://infor.org/"},
+      {name: "建國中學電子計算機研習社", shortname: "CKEISC", fb: "ckeisc38th", ig: "", web: "https://ckeisc.org/"},
       {name: "北一女中資訊研習社", shortname: "FGISC", fb: "fgisc", ig: "fgisc32nd", web: ""},
       {name: "中山女高資訊研究社", shortname: "ZSISC", fb: "zsisc25", ig: "zsisc26th", web: ""},
+      {name: "建中資訊社", shortname: "INFOR", fb: "ckINFOR", ig: "infor31st", web: "https://infor.org/"},
       {name: "景美女中電腦資訊社", shortname: "CMIOC", fb: "CMIOC25", ig: "cmioc25", web: ""},
       {name: "高雄女中電腦資訊暨網路科技研究社", shortname: "KGHSI2TRC2", fb: "KGHSI2TRC2", ig: "kghs_i2trc2_24th", web: "http://url.kghsi2trc2.tw/Web"},
       {name: "丹鳳資訊研究社", shortname: "dfichealer", fb: "", ig: "dfichealer", web: ""},
