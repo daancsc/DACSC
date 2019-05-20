@@ -111,6 +111,20 @@ strong
   background-color: $background-color
 
 
+.dropdown div
+  display: none
+  position: absolute
+  margin-top: 0
+  border-top: 1em solid $background-color
+  width: 6em
+  text-align: center
+  background-color: #333333
+
+
+.dropdown:hover div
+  display: block
+
+
 .logo
   width: 4em
   display: inline-block
@@ -192,11 +206,29 @@ a
   vertical-align: middle
 
 #phonemenu
-  text-align: center
+  margin-left: 1em
+  margin-right: 1em
   font-size: 1.3em
+  text-decoration: none
+
+#phonemenu p
+  display: flex
+  align-items: center
+  jusify-content: flex-start
+
+#phonemenu a
+  vertical-align: middle
+  text-align: left
+
+#phonemenu i
+  text-align: right
+  font-size: 0.7em
+  margin-left: auto
+  margin-right: 0
 
 .bar
   display: none
+  margin-right: 0.7em
 
 .noselect
   -webkit-touch-callout: none

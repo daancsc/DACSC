@@ -18,10 +18,13 @@ let app = {
   },
   menu: {
     item: [
-      {text: "友社", link: "/friends"},
       {text: "課程", link: "/class"},
       {text: "相簿", link: "/photos"},
-      {text: "關於電研", link: "/about"}
+      {text: "關於電研", link: null, sub: [
+        {text: "簡介", link: "/about"},
+        {text: "憲章", link: "/rules"},
+        {text: "友社", link: "/friends"}
+      ]}
     ],
     html: "",
     close: () => {
@@ -69,8 +72,21 @@ let useHash = true
 let router = new Navigo(root, useHash)
 
 app.menu.item.forEach(i=>{
-  app.menu.html += `<p><a href="#${i.link}">${i.text}</a></p>`
-  $('menu').innerHTML += `<p class="title nonphone menu"><a href="#${i.link}">${i.text}</a></p>`
+  let drop = ""
+  let morebutton = ""
+  if (i.sub != undefined) {
+    i.sub.forEach(j=>{
+        drop += `<p><a href="#${j.link}">${j.text}</a></p>`
+    })
+    morebutton = `<i class="fas fa-plus" aria-hidden="true"></i>`
+  }
+  app.menu.html += `<p><a href="#${i.link}">${i.text}</a>${morebutton}</p>`
+  if (i.link==null) {
+    i.link = ""
+  }
+  $('menu').innerHTML += `<div class="title nonphone menu dropdown"><a href="#${i.link}">${i.text}</a>
+    <div>${drop}</div>
+  </div>`
 })
 
 $('icon').innerHTML = `<i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>`
@@ -98,7 +114,7 @@ let error404 = () => {
     </div>
   `
   $('page').innerHTML = baseHTML
-  $('typed-strings').innerHTML = `<p>Are you love <br class="phone"><span class="color">Error 404</span>?</p>`
+  $('typed-strings').innerHTML = `<p>Do you love <br class="phone"><span class="color">Error 404</span>?</p>`
   start_typing()
 }
 
