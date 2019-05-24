@@ -18,9 +18,9 @@ let app = {
   },
   menu: {
     item: [
-      {text: "課程", link: "/class"},
-      {text: "相簿", link: "/photos"},
-      {text: "關於電研", link: null, sub: [
+      {id: 0, text: "課程", link: "/class"},
+      {id: 1, text: "相簿", link: "/photos"},
+      {id: 2, text: "關於電研", link: null, sub: [
         {text: "簡介", link: "/about"},
         {text: "憲章", link: "/rules"},
         {text: "友社", link: "/friends"}
@@ -36,6 +36,25 @@ let app = {
       $('phonemenu').innerHTML = app.menu.html
       $('icon').innerHTML = `<i class="fas fa-times bar" aria-hidden="true" onclick="app.menu.close()"></i>`
       app.menu.isShow = true
+    },
+    showsub: id => {
+      let html = ""
+      let style = `text-align: right;
+                   width: 100%;
+                  `
+      let j = 0
+      app.menu.item[id].sub.forEach(i => {
+        if (j == 0) {
+          html += `<p>
+                    <i class="fas fa-angle-left" style="text-align: left;margin-left: 0;width: 50%" aria-hidden="true" onclick="app.menu.open()"></i>
+                    <a style="${style}" href="#${i.link}">${i.text}</a>
+                  </p>`
+          j = 1
+        } else {
+          html += `<p><a style="${style}" href="#${i.link}">${i.text}</a></p>`
+        }
+      })
+      $('phonemenu').innerHTML = html
     },
     isShow: false
   },
@@ -74,13 +93,19 @@ let router = new Navigo(root, useHash)
 app.menu.item.forEach(i=>{
   let drop = ""
   let morebutton = ""
+  let item_html = ""
   if (i.sub != undefined) {
     i.sub.forEach(j=>{
         drop += `<p><a href="#${j.link}">${j.text}</a></p>`
     })
-    morebutton = `<i class="fas fa-plus" aria-hidden="true"></i>`
+    morebutton = `<i class="fas fa-angle-right" aria-hidden="true" onclick="app.menu.showsub(${i.id})"></i>`
   }
-  app.menu.html += `<p><a href="#${i.link}">${i.text}</a>${morebutton}</p>`
+  if (i.link != null) {
+    item_html = `<a href="#${i.link}">${i.text}</a>${morebutton}`
+  } else {
+    item_html = `${i.text}${morebutton}`
+  }
+  app.menu.html += `<p>${item_html}</p>`
   if (i.link==null) {
     i.link = ""
   }
