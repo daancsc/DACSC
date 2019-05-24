@@ -8,7 +8,7 @@ let app = {
   contact: [
     {name: "facebook", link: "https://www.facebook.com/DaanCSC", icon: "fab fa-facebook"},
     {name: "instagram", link: "https://www.instagram.com/daancsc/", icon: "fab fa-instagram"},
-    {name: "github", link: "https://github.com/wilicw/dacsc", icon: "fab fa-github"}
+    {name: "github", link: "https://github.com/daancsc/DACSC", icon: "fab fa-github"}
   ],
   footer: "DAAN Computer Study Club since 1999",
   year: new Date().getFullYear(),
