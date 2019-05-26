@@ -12,7 +12,7 @@
 
 ## [Demo](https://dacsc.club/DACSC/)
 
-## Screenshots
+## 螢幕截圖
 
 <p align="center">
   <img src="https://i.imgur.com/J0Pn53V.png" alt="Phone preview" width="250">
@@ -22,43 +22,43 @@
   <img src="https://i.imgur.com/9KzZB6H.png" alt="Desktop preview" width="650">
 </p>
 
-## Requirements
+## 軟體需求
 
-- Web browser
+- 瀏覽器
 
-- Any http server
+- HTTP 伺服器
 
 - npm
 
-## Get started
+## 基本建置
 
-Install `http-server` or other server what ever you want
+安裝 `http-server` 套件
 ```bash
 $ npm install -g http-server
 ```
 
-Install `sass` to build the sass file
+安裝用來編譯 sass 的 `sass` 套件
 ```bash
 $ npm install -g sass
 ```
 
-Clone this project
+Clone 這個專案
 ```bash
 $ git clone https://github.com/daancsc/DACSC.git
 ```
 
-Build `style.sass` to `style.css`
+編譯 `style.sass` 成 `style.css`
 ```bash
 $ cd DACSC
 $ sass style.sass style.css
 ```
 
-Run the http server
+執行 http server
 ```bash
 $ http-server
 ```
 
-## Docunentation
+## 參考文件
 
 - [Navigo](https://github.com/krasimir/navigo)
 
@@ -70,15 +70,15 @@ $ http-server
 
 - [Typed.js](https://github.com/mattboldt/typed.js/)
 
-## LICENSE
+## 授權條款
 
 MIT © DACSC
 
-[Full license](https://github.com/daancsc/DACSC/blob/master/LICENSE)
+[授權文件](https://github.com/daancsc/DACSC/blob/master/LICENSE)
 
-## Others
+## 其他
 
-Thanks to NTUSTISC for a part of the source code in this project.
+感謝 NTUSTISC 臺科資安研究社 提供此專案部份原始碼
 
 [NTUSTISC Github](https://github.com/NTUSTISC/)
 
