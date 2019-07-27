@@ -97,14 +97,14 @@ let app = {
       {
         name: '建國中學電子計算機研習社',
         shortname: 'CKEISC',
-        fb: 'ckeisc38th',
-        ig: '',
+        fb: '',
+        ig: 'ckeisc39th',
         web: 'https://ckeisc.org/'
       },
       { name: '北一女中資訊研習社',
         shortname: 'FGISC',
         fb: 'fgisc',
-        ig: 'fgisc32nd',
+        ig: 'fgisc33rd',
         web: ''
       },
       { name: '中山女高資訊研究社',
@@ -116,7 +116,7 @@ let app = {
       { name: '建中資訊社',
         shortname: 'INFOR',
         fb: 'ckINFOR',
-        ig: 'infor31st',
+        ig: 'infor32nd',
         web: 'https://infor.org/'
       },
       { name: '景美女中電腦資訊社',
