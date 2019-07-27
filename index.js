@@ -1,7 +1,8 @@
 let _ = document
-let $ = i => _.getElementById(i)
+let $ = _.querySelector.bind(_)
 let app = {
-  title: '大安高工電腦研究社 | DACSC',
+  _title: '大安高工電腦研究社 | DACSC',
+  _renderBase: '',
   name: '大安高工電腦研究社',
   shortname: '大安電研',
   en_name: 'DACSC',
@@ -20,11 +21,16 @@ let app = {
       icon: 'fab fa-github'
     }
   ],
+  module: {
+    '_': i => _(i),
+    '$': i => $(i),
+    'startTyping': i => startTyping(i)
+  },
   footer: 'DAAN Computer Study Club since 1999',
   year: new Date().getFullYear(),
   init: () => {
     app.menu.close()
-    $('page').innerHTML = ''
+    $('#page').innerHTML = ''
   },
   menu: {
     item: [
@@ -56,13 +62,13 @@ let app = {
     ],
     html: '',
     close: () => {
-      $('phonemenu').innerHTML = ''
-      $('icon').innerHTML = `<i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>`
+      $('#phonemenu').innerHTML = ''
+      $('#icon').innerHTML = `<i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>`
       app.menu.isShow = false
     },
     open: () => {
-      $('phonemenu').innerHTML = app.menu.html
-      $('icon').innerHTML = `<i class="fas fa-times bar" aria-hidden="true" onclick="app.menu.close()"></i>`
+      $('#phonemenu').innerHTML = app.menu.html
+      $('#icon').innerHTML = `<i class="fas fa-times bar" aria-hidden="true" onclick="app.menu.close()"></i>`
       app.menu.isShow = true
     },
     showsub: id => {
@@ -82,7 +88,7 @@ let app = {
           html += `<p><a style="${style}" href="#${i.link}">${i.text}</a></p>`
         }
       })
-      $('phonemenu').innerHTML = html
+      $('#phonemenu').innerHTML = html
     },
     isShow: false
   },
@@ -228,6 +234,19 @@ let app = {
         web: ''
       }
     ]
+  },
+  get title () {
+    return this._title
+  },
+  set title (val) {
+    _.title = val
+    this._title = val
+  },
+  get renderBase () {
+    return this._renderBase
+  },
+  set renderBase (val) {
+    $('#page').innerHTML = val
   }
 }
 let root = null
@@ -253,17 +272,16 @@ app.menu.item.forEach(i => {
   if (i.link === null) {
     i.link = ''
   }
-  $('menu').innerHTML += `<div class="title nonphone menu dropdown"><a href="#${i.link}">${i.text}</a>
+  $('#menu').innerHTML += `<div class="title nonphone menu dropdown"><a href="#${i.link}">${i.text}</a>
     <div>${drop}</div>
   </div>`
 })
 
-$('icon').innerHTML = `<i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>`
+$('#icon').innerHTML = `<i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>`
 
-_.title = app.title
-_.getElementsByClassName('nonphone')[0].innerHTML = app.name
-_.getElementsByClassName('phone')[0].innerHTML = app.shortname
-$('footer').innerHTML = `© ${app.year} <b>${app.footer}</b>.`
+$('.nonphone').innerHTML = app.name
+$('.phone').innerHTML = app.shortname
+$('#footer').innerHTML = `© ${app.year} <b>${app.footer}</b>.`
 
 let startTyping = () => {
   let typed = new Typed('#typed', {
@@ -273,147 +291,51 @@ let startTyping = () => {
   })
 }
 
-let error404 = () => {
-  app.init()
-  _.title = `404 Not found | ${app.shortname}`
-  let baseHTML = `
-    <div class="cover container mono">
-      <div id="typed-strings"></div>
-      <span id="typed"></span>
-    </div>
-  `
-  $('page').innerHTML = baseHTML
-  $('typed-strings').innerHTML = `<p>Do you love <br class="phone"><span class="color">Error 404</span>?</p>`
-  startTyping()
-}
-
 let underDEV = () => {
   app.init()
-  let baseHTML = `
+  app.renderBase = `
     <div class="cover container mono">
       <div id="typed-strings"></div>
       <span id="typed"></span>
     </div>
   `
-  $('page').innerHTML = baseHTML
-  $('typed-strings').innerHTML = `<p>We are under<br><span class="color">Development</span>!</p>`
+  $('#typed-strings').innerHTML = `<p>We are under<br><span class="color">Development</span>!</p>`
   startTyping()
-}
-
-let rules = () => {
-  app.init()
-  _.title = `社團憲章 | ${app.shortname}`
-  let baseHTML = `
-    <div class="container">
-      <p class="page-title">社團憲章</p>
-      <hr>
-      <br>
-      <div id="rules"></div>
-    </div>
-  `
-  $('page').innerHTML = baseHTML
-  fetch('rules.md')
-    .then(res => {
-      return res.text()
-    })
-    .then(data => {
-      let converter = new showdown.Converter()
-      let html = converter.makeHtml(data)
-      $('rules').innerHTML = html
-    })
-}
-
-let friends = () => {
-  app.init()
-  _.title = `電資友社 | ${app.shortname}`
-  let baseHTML = `
-    <div class="container">
-      <p class="page-title">電資友社</p>
-      <hr>
-      <br>
-      <div id="friends"></div>
-      <div class="section"></div>
-      <p class="no-important">* 如須更新資料請來信告知</p>
-    </div>
-  `
-  $('page').innerHTML = baseHTML
-  let j = 0
-  let cardHTML = ''
-  app.friends.list.forEach(i => {
-    let fb = ''
-    let ig = ''
-    let web = ''
-    if (i.fb !== '') {
-      fb = `<a href="https://fb.com/${i.fb}"><i class="fab fa-facebook" aria-hidden="true"></i></a>`
-    }
-    if (i.ig !== '') {
-      ig = `<a href="https://www.instagram.com/${i.ig}"><i class="fab fa-instagram" aria-hidden="true"></i></a>`
-    }
-    if (i.web !== '') {
-      web = `<a href="${i.web}"><i class="fas fa-globe-asia" aria-hidden="true"></i></a>`
-    }
-    cardHTML += `
-      <div class="col grid_1_of_4">
-        <p class="card_short mono">${i.shortname}</p>
-        <p class="card_title">${i.name} </p>
-        <span class="card_link">
-          ${fb}
-          ${ig}
-          ${web}
-        </span>
-      </div>
-    `
-    if ((j + 1) % 4 === 0) {
-      $('friends').innerHTML += `<div class="section">${cardHTML}</div>`
-      cardHTML = ''
-    }
-    if (j === app.friends.list.length - 1) {
-      $('friends').innerHTML += `<div class="section">${cardHTML}</div>`
-      cardHTML = ''
-    }
-    j++
-  })
 }
 
 router.on(() => {
-  app.init()
-  let baseHTML = `
-    <div class="cover container mono">
-      <div id="typed-strings"></div>
-      <span id="typed"></span>
-      <div id="contact"></div>
-    </div>
-  `
-  $('page').innerHTML = baseHTML
-  let items = ['Algorithm', 'Assembly', 'C++', 'Python', 'JavaScript', '<b>DACSC</b>']//, "Your Grandma"]
-  items.forEach(i => {
-    $('typed-strings').innerHTML += `<p>We Love <br class="phone"><span class="color">${i}</span>!</p>`
+  import('./pages/default.js').then((module) => {
+    module.page(app)
   })
-  app.contact.forEach(i => {
-    $('contact').innerHTML += `<a href="${i.link}"><i class="${i.icon}" aria-hidden="true"></i></a>`
-  })
-  startTyping()
 }).resolve()
 
 router.on({
   '/about': () => {
-    underDEV()
+    import('./pages/about.js').then((module) => {
+      module.page(app)
+    })
   },
   '/class': () => {
     underDEV()
   },
   '/friends': () => {
-    friends()
+    import('./pages/friends.js').then((module) => {
+      module.page(app)
+    })
   },
   '/photos': () => {
     underDEV()
     // router.navigate('/')
   },
   '/rules': () => {
-    rules()
+    import('./pages/rules.js').then((module) => {
+      module.page(app)
+    })
   },
   '/404': () => {
-    error404()
+    import('./pages/E404.js').then((module) => {
+      module.page(app)
+    })
   }
 }).resolve()
 
@@ -421,4 +343,4 @@ router.notFound(() => {
   router.navigate('/404')
 })
 
-console.log('%c DACSC\n 大安電研\n 21th\n ', 'font-family: "Ubuntu Mono", monospace;font-size: 5em; color: red;text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)')
+console.log('%c DACSC\n 大安電研\n 21st\n ', 'font-family: "Ubuntu Mono", monospace;font-size: 5em; color: red;text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)')
