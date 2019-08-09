@@ -80,7 +80,8 @@ let app = {
       })
       $('#phonemenu').innerHTML = html
     },
-    isShow: false
+    isShow: false,
+    html: ''
   },
   get title () {
     return this._title
@@ -100,7 +101,7 @@ let app = {
 app.menu.item.forEach(i => {
   let drop = ''
   let morebutton = ''
-  let itemHtml
+  let itemHtml = ''
   if (i.sub !== undefined) {
     i.sub.forEach(j => {
       drop += `<p><a href="#${j.link}">${j.text}</a></p>`
@@ -122,7 +123,6 @@ app.menu.item.forEach(i => {
 })
 
 $('#icon').innerHTML = `<i class="fas fa-bars bar" aria-hidden="true" onclick="app.menu.open()"></i>`
-
 $('.nonphone').innerHTML = app.name
 $('.phone').innerHTML = app.shortname
 $('#footer').innerHTML = `© ${app.year} <b>${app.footer}</b>.`
