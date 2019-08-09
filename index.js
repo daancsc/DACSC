@@ -1,7 +1,7 @@
 let _ = document
 let $ = _.querySelector.bind(_)
 let app = {
-  _title: '大安高工電腦研究社 | DACSC',
+  _title: '',
   _renderBase: '',
   name: '大安高工電腦研究社',
   shortname: '大安電研',

@@ -1,6 +1,7 @@
 export function page (app) {
   let $ = app.modules.$.bind(app)
   app.init()
+  app.title = `大安高工電腦研究社 | DACSC`
   app.renderBase = `
     <div class="cover container mono">
       <div id="typed-strings"></div>
