@@ -19,7 +19,8 @@ export function page (app) {
         font-size: 12pt;
       }
       .col {
-        height: 250px;
+        position: flex;
+        height: 260px;
       }
     </style>
   `
@@ -28,9 +29,10 @@ export function page (app) {
   classi.list.forEach(i => {
     cardHTML += `
       <div class="col grid_1_of_4">
+        <a href="${i.link}">
         <p class="card_short titles">${i.titles}</p>
         <p class="card_title discription">${i.discription} </p>
-        <span class="card_link"><a href="${i.link}">課程資源</a></span>
+        </a>
       </div>
     `
     if ((j + 1) % 4 === 0) {
