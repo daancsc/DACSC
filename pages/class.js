@@ -1,7 +1,7 @@
 export function page (app) {
   let $ = app.modules.$.bind(app)
   app.init()
-  app.title = `電資友社 | ${app.shortname}`
+  app.title = `課程資訊 | ${app.shortname}`
   app.renderBase = `
     <div class="container">
       <p class="page-title">課程資訊</p>
@@ -30,7 +30,7 @@ export function page (app) {
       <div class="col grid_1_of_4">
         <p class="card_short titles">${i.titles}</p>
         <p class="card_title discription">${i.discription} </p>
-        <span class="card_link">${i.link}</span>
+        <span class="card_link"><a href="${i.link}">課程資源</a></span>
       </div>
     `
     if ((j + 1) % 4 === 0) {
