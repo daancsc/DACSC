@@ -1,5 +1,5 @@
-export function page(app) {
-  let $ = app.module.$.bind(app)
+export function page (app) {
+  let $ = app.modules.$.bind(app)
   app.init()
   app.title = `社團憲章 | ${app.shortname}`
   app.renderBase = `

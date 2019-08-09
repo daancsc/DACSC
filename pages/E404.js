@@ -1,4 +1,4 @@
-export function page(app) {
+export function page (app) {
   let $ = app.module.$.bind(app)
   app.init()
   app.title = `404 Not found | ${app.shortname}`

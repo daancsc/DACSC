@@ -1,5 +1,5 @@
-export function page(app) {
-  let $ = app.module.$.bind(app)
+export function page (app) {
+  let $ = app.modules.$.bind(app)
   app.init()
   app.renderBase = `
     <div class="cover container mono">
@@ -15,5 +15,5 @@ export function page(app) {
   app.contact.forEach(i => {
     $('#contact').innerHTML += `<a href="${i.link}"><i class="${i.icon}" aria-hidden="true"></i></a>`
   })
-  app.module.startTyping()
+  app.modules.startTyping()
 }
