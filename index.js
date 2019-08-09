@@ -6,21 +6,6 @@ let app = {
   name: '大安高工電腦研究社',
   shortname: '大安電研',
   en_name: 'DACSC',
-  contact: [
-    {
-      name: 'facebook',
-      link: 'https://www.facebook.com/DaanCSC',
-      icon: 'fab fa-facebook'
-    }, {
-      name: 'instagram',
-      link: 'https://www.instagram.com/daancsc/',
-      icon: 'fab fa-instagram'
-    }, {
-      name: 'github',
-      link: 'https://github.com/daancsc/DACSC',
-      icon: 'fab fa-github'
-    }
-  ],
   modules: {
     '_': i => _(i),
     '$': i => $(i),
