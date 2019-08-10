@@ -22,8 +22,14 @@ export function page (app) {
         position: flex;
         height: 19em;
       }
+      .col:hover i {
+        transition: .2s linear;
+        color: #888888;
+      }
+      .icon i {
+        width: 100%;
+      }
       .icon {
-        width:117%;
         font-size: 1.5em;
         text-align: center;
       }

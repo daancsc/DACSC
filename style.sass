@@ -1,5 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Ubuntu+Mono"
-@import "https://fonts.googleapis.com/css?family=Noto+Sans+TC"
+@import "https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500&display=swap&subset=chinese-traditional"
 
 $font: 'Noto Sans TC', sans-serif
 $mono: 'Ubuntu Mono', monospace
@@ -23,6 +23,7 @@ a i:hover
 
 body
   font-family: $font
+  font-weight: 400
   background-color: $background-color
   color: $font-color
   margin: 0
@@ -31,6 +32,7 @@ body
 hr
   border: none
   border-top: 3px solid $primary-color
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, .2)
   width: 6em
 
 strong
@@ -141,12 +143,14 @@ strong
 .title
   font-size: 1.6em
   margin-left: 0.8em
+  font-weight: 500
   vertical-align: middle
 
 
 .page-title
   font-size: 2em
   text-align: center
+  font-weight: 500
 
 .nonphone
   display: inline
