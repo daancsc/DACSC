@@ -101,10 +101,14 @@ let app = {
 app.menu.item.forEach(i => {
   let drop = ''
   let morebutton = ''
+  let isdrop = ''
   let itemHtml = ''
   if (i.sub !== undefined) {
+    isdrop = `dropdown`
+    let k = 1
     i.sub.forEach(j => {
-      drop += `<p><a href="#${j.link}">${j.text}</a></p>`
+      drop += `<p><a class="subitem" style="animation-delay: .${k}s" href="#${j.link}">${j.text}</a></p>`
+      k++
     })
     morebutton = `<i class="fas fa-angle-right" aria-hidden="true" onclick="app.menu.showsub(${i.id})"></i>`
   }
@@ -117,8 +121,8 @@ app.menu.item.forEach(i => {
   if (i.link === null) {
     i.link = ''
   }
-  $('#menu').innerHTML += `<div class="title nonphone menu dropdown"><a href="#${i.link}">${i.text}</a>
-    <div>${drop}</div>
+  $('#menu').innerHTML += `<div class="title nonphone menu ${isdrop}"><a href="#${i.link}">${i.text}</a>
+    <div style="margin-top: 1em;">${drop}</div>
   </div>`
 })
 

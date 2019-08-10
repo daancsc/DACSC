@@ -60,6 +60,8 @@ strong
 .col:first-child
   margin-left: 0 !important
 
+.col:hover
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .25)
 
 /* Row */
 .row:before, .row:after
@@ -110,26 +112,26 @@ strong
   margin-left: 3vh
   z-index: 9999
 
+.dropdown
+  border-bottom: 1em solid $background-color
 
 .dropdown div
   display: none
   position: absolute
   background-color: #333333
   margin-top: 0
-  border-top: 1em solid $background-color
   text-align: center
   width: 6em
 
-
 .dropdown:hover div
+  overflow: hidden
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, .3)
   display: block
-
 
 .logo
   display: inline-block
   width: 4em
   vertical-align: middle
-
 
 .container
   position: relative
