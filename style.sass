@@ -8,7 +8,7 @@ $font-color: antiquewhite
 $primary-color: #22c9b7
 $noimportant-color: #595959
 $footer-height: 6vh
-
+$shadow: 0 4px 6px 0 rgba(0, 0, 0, .25)
 a
   color: $font-color
   text-decoration: none
@@ -32,7 +32,7 @@ body
 hr
   border: none
   border-top: 3px solid $primary-color
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .25)
+  box-shadow: $shadow
   padding: 0
   width: 6em
 
@@ -64,7 +64,7 @@ strong
   margin-left: 0 !important
 
 .col:hover
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .25)
+  box-shadow: $shadow
 
 /* Row */
 .row:before, .row:after
@@ -128,7 +128,7 @@ strong
 
 .dropdown:hover div
   overflow: hidden
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .25)
+  box-shadow: $shadow
   display: block
 
 .logo
