@@ -39,8 +39,8 @@ export function page (app) {
   let cardHTML = ''
   classi.list.forEach(i => {
     let link = '<a>'
-    if (i.link!='') {
-      link = `<a href="${i.link}">`
+    if (i.link !== '') {
+      link = `<a target="_blank" rel="noopener noreferrer" href="${i.link}">`
     }
     cardHTML += `
       <div class="col grid_1_of_4">

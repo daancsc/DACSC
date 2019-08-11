@@ -13,7 +13,7 @@ export function page (app) {
     $('#typed-strings').innerHTML += `<p>We Love <br class="phone"><span class="color">${i}</span>!</p>`
   })
   contact.forEach(i => {
-    $('#contact').innerHTML += `<a href="${i.link}"><i class="${i.icon}" aria-hidden="true"></i></a>`
+    $('#contact').innerHTML += `<a target="_blank" rel="noopener noreferrer" href="${i.link}"><i class="${i.icon}" aria-hidden="true"></i></a>`
   })
   app.modules.startTyping()
 }

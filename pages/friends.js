@@ -24,13 +24,13 @@ export function page (app) {
     let ig = ''
     let web = ''
     if (i.fb !== '') {
-      fb = `<a href="https://fb.com/${i.fb}"><i class="fab fa-facebook" aria-hidden="true"></i></a>`
+      fb = `<a target="_blank" rel="noopener noreferrer" href="https://fb.com/${i.fb}"><i class="fab fa-facebook" aria-hidden="true"></i></a>`
     }
     if (i.ig !== '') {
-      ig = `<a href="https://www.instagram.com/${i.ig}"><i class="fab fa-instagram" aria-hidden="true"></i></a>`
+      ig = `<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/${i.ig}"><i class="fab fa-instagram" aria-hidden="true"></i></a>`
     }
     if (i.web !== '') {
-      web = `<a href="${i.web}"><i class="fas fa-globe-asia" aria-hidden="true"></i></a>`
+      web = `<a target="_blank" rel="noopener noreferrer" href="${i.web}"><i class="fas fa-globe-asia" aria-hidden="true"></i></a>`
     }
     cardHTML += `
       <div class="col grid_1_of_4">
