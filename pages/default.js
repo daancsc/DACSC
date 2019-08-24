@@ -7,9 +7,8 @@ export function page (app) {
       <div id="typed-strings"></div>
       <span id="typed"></span>
       <br>
-      <p class="news">
-
-      </p>
+      <span id="typed"></span>
+      <p class="news"></p>
       <div id="contact"></div>
     </div>
     <style>
@@ -48,7 +47,7 @@ let contact = [
     icon: 'fab fa-facebook'
   }, {
     name: 'instagram',
-    link: 'https://www.instagram.com/daancsc/',
+    link: 'https://www.instagram.com/dacsc_21/',
     icon: 'fab fa-instagram'
   }, {
     name: 'github',
@@ -58,13 +57,13 @@ let contact = [
 ]
 
 let news = [
-  {
-    title: '<span class="color">8/24 </span>新生試探課程報名',
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSeBS8woh0f-hcwoweHdeaUNA2Qv1M8xN6q5Wyx4QgpqSRK9kQ/viewform',
-    deadline: {
-      yyyy: 2019,
-      mm: 8,
-      dd: 24
-    }
-  }
+  //{
+  //  title: '<span class="color">8/24 </span>新生試探課程報名',
+  //  link: 'https://docs.google.com/forms/d/e/1FAIpQLSeBS8woh0f-hcwoweHdeaUNA2Qv1M8xN6q5Wyx4QgpqSRK9kQ/viewform',
+  //  deadline: {
+  //    yyyy: 2019,
+  //    mm: 8,
+  //    dd: 24
+  //  }
+  //}
 ]
