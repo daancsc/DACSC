@@ -57,13 +57,13 @@ let contact = [
 ]
 
 let news = [
-  //{
-  //  title: '<span class="color">8/24 </span>新生試探課程報名',
-  //  link: 'https://docs.google.com/forms/d/e/1FAIpQLSeBS8woh0f-hcwoweHdeaUNA2Qv1M8xN6q5Wyx4QgpqSRK9kQ/viewform',
-  //  deadline: {
-  //    yyyy: 2019,
-  //    mm: 8,
-  //    dd: 24
-  //  }
-  //}
+  {
+    title: '<span class="color"></span>社團報名表單',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSf_rPjcUYpNyK1PmuGyehTi8eeUgdUCT1UJ6kRzPmOgvBlRWQ/viewform',
+    deadline: {
+      yyyy: 2019,
+      mm: 10,
+      dd: 1
+    }
+  }
 ]
