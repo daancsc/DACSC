@@ -58,7 +58,7 @@ Run the http server
 $ http-server
 ```
 
-## Docunentation
+## Documentation
 
 - [Navigo](https://github.com/krasimir/navigo)
 
