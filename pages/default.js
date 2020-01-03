@@ -57,7 +57,7 @@ let contact = [
 ]
 
 let news = [
-  {
+  /**{
     title: '<span class="color"></span>社團報名表單',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSf_rPjcUYpNyK1PmuGyehTi8eeUgdUCT1UJ6kRzPmOgvBlRWQ/viewform',
     deadline: {
@@ -65,5 +65,5 @@ let news = [
       mm: 10,
       dd: 1
     }
-  }
+  }**/
 ]
