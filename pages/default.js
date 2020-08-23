@@ -47,7 +47,7 @@ let contact = [
     icon: 'fab fa-facebook'
   }, {
     name: 'instagram',
-    link: 'https://www.instagram.com/dacsc_21/',
+    link: 'https://www.instagram.com/dacsc_22/',
     icon: 'fab fa-instagram'
   }, {
     name: 'github',
