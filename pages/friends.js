@@ -72,7 +72,7 @@ let friends = {
     },
     { name: '中山女高資訊研究社',
       shortname: 'ZSISC',
-      fb: 'zsisc25',
+      fb: '中山女高資訊研究社26th-267152867499225',
       ig: 'zsisc26th',
       web: ''
     },
