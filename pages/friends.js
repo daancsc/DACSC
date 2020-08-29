@@ -61,7 +61,7 @@ let friends = {
       name: '建國中學電子計算機研習社',
       shortname: 'CKEISC',
       fb: '',
-      ig: 'ckeisc39th',
+      ig: 'ckeisc40th',
       web: 'https://ckeisc.org/'
     },
     { name: '北一女中資訊研習社',
