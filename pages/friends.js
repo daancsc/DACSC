@@ -24,7 +24,7 @@ export function page (app) {
     let ig = ''
     let web = ''
     if (i.fb !== '') {
-      fb = `<a target="_blank" rel="noopener noreferrer" href="https://fb.com/${i.fb}"><i class="fab fa-facebook" aria-hidden="true"></i></a>`
+      fb = `<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/${i.fb}"><i class="fab fa-facebook" aria-hidden="true"></i></a>`
     }
     if (i.ig !== '') {
       ig = `<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/${i.ig}"><i class="fab fa-instagram" aria-hidden="true"></i></a>`
