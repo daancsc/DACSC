@@ -25,8 +25,10 @@ router.on({
     })
   },
   '/photos': () => {
-    underDEV()
-    // router.navigate('/')
+    import('./pages/photos.js').then((module) => {
+      module.page(app)
+    })
+    // underDEV()
   },
   '/rules': () => {
     import('./pages/rules.js').then((module) => {
