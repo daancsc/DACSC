@@ -39,6 +39,19 @@ jobs:
             ref: gh-pages
             fetch-depth: 1
 
+      - name: Reset gh-pages branch to master
+        run: |
+          git reset --hard origin/master
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Action'
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+
       - name: Move compiled CSS to path within pr-pages branch
         run: mv /tmp/css/style.css style.css
 
@@ -46,6 +59,11 @@ jobs:
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
+          cat >.gitignore<<EOF
+          *.css
+          *.css.map
+          !style.css
+          EOF
           git add .
           git commit -m 'Updates compiled CSS files'
 
