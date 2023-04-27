@@ -10,7 +10,7 @@
 
 ##### [English](https://github.com/daancsc/DACSC/blob/master/README.md) [正體中文](https://github.com/daancsc/DACSC/blob/master/README_ZH.md)
 
-## [Demo](https://dacsc.club/DACSC/)
+## [Demo](https://dacsc.club/)
 
 ## 螢幕截圖
 
