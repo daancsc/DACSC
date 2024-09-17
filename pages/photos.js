@@ -29,6 +29,7 @@ export function page (app) {
             plugins: [lgThumbnail,lgZoom,lgHash],
             allowMediaOverlap: true,
             toggleThumb: true,
+            download: false,
         });
         
         jQuery(document).ready(function() { 
