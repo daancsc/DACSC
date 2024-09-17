@@ -17,10 +17,10 @@ export function page (app) {
         var html_data="";
         data.forEach((value)=>{
             var image_ID=value[1].split('/')[5];
-            var image_URL=`https://drive.google.com/uc?export=view&id=${image_ID}`;
+            var image_URL=`https://drive.google.com/thumbnail?export=view&id=${image_ID}&sz=w1400-h1400`;
             html_data+= `
             <a href="${image_URL}">
-                <img src="${image_URL}" />
+                <img src="${image_URL}"/>
             </a>
             `
         })
@@ -29,6 +29,7 @@ export function page (app) {
             plugins: [lgThumbnail,lgZoom,lgHash],
             allowMediaOverlap: true,
             toggleThumb: true,
+            download: false,
         });
         
         jQuery(document).ready(function() { 
