@@ -26,7 +26,7 @@ export function page (app) {
         })
         $('#gallery').innerHTML=html_data;
         lightGallery(document.getElementById('gallery'), {
-            plugins: [lgThumbnail,lgZoom,lgHash],
+            plugins: [lgThumbnail,lgZoom],
             allowMediaOverlap: true,
             toggleThumb: true,
             download: false,
